@@ -1,104 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desowja Palagani - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Desowja Palagani - Senior Software Test Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a202c; /* Dark Gray */
+            color: #e2e8f0; /* Light Gray */
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-card {
+            background: rgba(45, 55, 72, 0.7); /* Semi-transparent dark blue-gray */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .accent-text {
+            color: #63b3ed; /* Light Blue */
+        }
+        .accent-border {
+            border-color: #63b3ed;
+        }
+        .skill-tag {
+            background-color: #2d3748; /* Gray */
+            color: #a0aec0; /* Lighter Gray */
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            background-color: #63b3ed;
+            color: #1a202c;
+            transform: translateY(-3px);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -2.8rem;
+            top: 0.25rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            background-color: #2d3748;
+            border: 3px solid #63b3ed;
+            border-radius: 50%;
+        }
+        .timeline-line {
+            position: absolute;
+            left: -2.2rem;
+            top: 1.25rem;
+            bottom: -1rem;
+            width: 2px;
+            background-color: #4a5568;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1 class="typing-effect">Hi, I'm Desowja Palagani</h1>
-            <p>Senior Test Engineer | API & Automation Expert</p>
-            <a href="assets/resume.pdf" download class="btn">Download Resume</a>
-        </div>
-    </header>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p> Dynamic Software Testing professional with 4 years of experience in analyzing business specifications, developing test plans, and executing test cases. Skilled in various testing types, including functional, integration, regression, UI, browser compatibility, smoke, exploratory, system, and ad-hoc testing.
-
-Proficient in defect tracking, reporting, and test case management using ALM, CQ, and JIRA. Experienced in backend testing with Postman and automation frameworks like X-Unit and BDD. Strong domain expertise in trading, securities, investments, and banking processes.
-
-Hands-on experience in writing and executing manual test cases, logging defects, and maintaining test scripts for functional and regression testing. Proven ability to ensure seamless cloud platform integrations and high-quality releases through regression testing, API testing, and system migrations.
-
-Skilled in tools like Splunk, Parasoft SOA, and Visual Studio, with proficiency in C#, .NET, and MySQL. Recognized for delivering projects on time, collaborating with cross-functional teams, and optimizing workflows. Awarded for leadership and performance in high-impact projects for clients like Charles Schwab Corporation. Dedicated to driving innovation, improving efficiency, and supporting organizational success. </p>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="job">
-                <h3>Senior Software Test Engineer - CGI</h3>
-                <p><em>Feb 2025 - Present | Bengaluru, India</em></p>
-                <ul>
-                    <li>Led API validation testing using Postman, RestAssured, and Swagger.</li>
-                    <li>Developed test strategy documents aligning with business goals.</li>
-                    <li>Managed defect tracking using JIRA and Azure DevOps.</li>
-                </ul>
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+        
+        <!-- Hero Section -->
+        <header class="section text-center py-16">
+            <img src="https://placehold.co/150x150/63B3ED/1A202C?text=DP" alt="Desowja Palagani" class="mx-auto rounded-full w-40 h-40 border-4 accent-border shadow-2xl mb-6">
+            <h1 class="text-5xl font-bold text-white">Desowja Palagani</h1>
+            <p class="text-2xl mt-2 accent-text">Senior Software Test Engineer</p>
+            <div class="mt-8 flex justify-center items-center flex-wrap gap-x-8 gap-y-4 text-gray-400">
+                <a href="mailto:deepalagani1998@gmail.com" class="hover:accent-text transition-colors flex items-center gap-2"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/desowja-palagani-459729178" target="_blank" class="hover:accent-text transition-colors flex items-center gap-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</span>
             </div>
-            <div class="job">
-                <h3>Senior Project Engineer - Wipro</h3>
-                <p><em>Mar 2021 - Feb 2025 | Bengaluru, India</em></p>
-                <ul>
-                    <li>Performed functional and regression testing for trading applications.</li>
-                    <li>Automated test strategies, improving team productivity by 30%.</li>
-                    <li>Collaborated with Agile teams for seamless CI/CD pipeline integration.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skill"><span>API Testing (Postman, RestAssured)</span><div class="bar" style="width: 90%;"></div></div>
-            <div class="skill"><span>Automation Testing (Selenium, C#, Java)</span><div class="bar" style="width: 85%;"></div></div>
-            <div class="skill"><span>Performance Testing (JMeter, LoadRunner)</span><div class="bar" style="width: 80%;"></div></div>
-        </div>
-    </section>
+        <main class="space-y-16">
+            <!-- About Section -->
+            <section class="section glass-card p-8">
+                <h2 class="text-3xl font-bold text-white border-b-2 accent-border pb-3 mb-6">Professional Summary</h2>
+                <p class="text-lg leading-relaxed">
+                    A results-oriented Senior Software Test Engineer with over 4.5 years of expertise in crafting and executing comprehensive testing strategies. My experience spans manual, automation, and performance testing for complex applications in banking, trading, and cloud services. I excel at leading QA initiatives, validating intricate APIs, and ensuring top-tier software quality and compliance.
+                </p>
+            </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>B.Tech in Electronics & Communications</strong> - JNTU Kakinada (2020) - CGPA: 7.28</li>
-                <li><strong>Higher Secondary</strong> - Sri Chaitanya Junior College (2016) - 94.7%</li>
-                <li><strong>Secondary School</strong> - Vijaya Sri Sunflower High School (2014) - CGPA: 9.3</li>
-            </ul>
-        </div>
-    </section>
+            <!-- Experience Section -->
+            <section class="section">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Career Journey</h2>
+                <div class="relative pl-10 border-l-2 border-gray-700">
+                    <!-- CGI -->
+                    <div class="relative mb-12">
+                         <div class="timeline-dot"></div>
+                        <div class="glass-card p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-xs accent-text">Feb 2025 - Present</p>
+                                    <h3 class="text-xl font-bold text-white">Senior Software Test Engineer</h3>
+                                    <p class="text-md font-semibold text-gray-300">CGI (Client: CIBC US)</p>
+                                </div>
+                                <img src="https://placehold.co/100x40/FFFFFF/1A202C?text=CGI" alt="CGI Logo" class="rounded h-10 w-auto opacity-70">
+                            </div>
+                            <ul class="mt-4 list-disc list-inside text-gray-400 space-y-2">
+                                <li>Leading API validation using Postman, RestAssured, Swagger, and SOAP UI.</li>
+                                <li>Managing offshore teams and aligning test strategies with compliance standards.</li>
+                                <li>Conducting performance testing with JMeter and LoadRunner for application resilience.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Wipro -->
+                    <div class="relative">
+                         <div class="timeline-dot"></div>
+                        <div class="glass-card p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-xs accent-text">Mar 2021 - Feb 2025</p>
+                                    <h3 class="text-xl font-bold text-white">Senior Project Engineer</h3>
+                                    <p class="text-md font-semibold text-gray-300">Wipro Technologies (Client: Charles Schwab)</p>
+                                </div>
+                                 <img src="https://placehold.co/100x40/FFFFFF/1A202C?text=Wipro" alt="Wipro Logo" class="rounded h-10 w-auto opacity-70">
+                            </div>
+                            <ul class="mt-4 list-disc list-inside text-gray-400 space-y-2">
+                                <li>Performed E2E testing for trading platforms during a major cloud migration initiative.</li>
+                                <li>Developed automation scripts with Parasoft SOA for critical regression tests.</li>
+                                <li>Leveraged LoadRunner and Splunk for performance analysis and production monitoring.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section class="section glass-card p-8">
+                <h2 class="text-3xl font-bold text-white border-b-2 accent-border pb-3 mb-6">Technical Skills</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold text-lg accent-text mb-3">API & Automation</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag px-4 py-2 rounded-full">Postman</span><span class="skill-tag px-4 py-2 rounded-full">RestAssured</span><span class="skill-tag px-4 py-2 rounded-full">SOAP UI</span><span class="skill-tag px-4 py-2 rounded-full">Selenium</span><span class="skill-tag px-4 py-2 rounded-full">Java</span><span class="skill-tag px-4 py-2 rounded-full">C#</span><span class="skill-tag px-4 py-2 rounded-full">Parasoft SOA</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg accent-text mb-3">Performance & Databases</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag px-4 py-2 rounded-full">LoadRunner</span><span class="skill-tag px-4 py-2 rounded-full">JMeter</span><span class="skill-tag px-4 py-2 rounded-full">SQL</span><span class="skill-tag px-4 py-2 rounded-full">MySQL</span><span class="skill-tag px-4 py-2 rounded-full">DB2</span><span class="skill-tag px-4 py-2 rounded-full">Splunk</span>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="font-semibold text-lg accent-text mb-3">Tools & Methodologies</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag px-4 py-2 rounded-full">JIRA</span><span class="skill-tag px-4 py-2 rounded-full">Azure DevOps</span><span class="skill-tag px-4 py-2 rounded-full">Jenkins</span><span class="skill-tag px-4 py-2 rounded-full">Agile/Scrum</span><span class="skill-tag px-4 py-2 rounded-full">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Education & Achievements -->
+            <section class="section grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8">
+                    <h2 class="text-2xl font-bold text-white border-b-2 accent-border pb-3 mb-6">Education</h2>
+                    <h3 class="text-xl font-bold text-white">B.Tech, Electronics & Comm.</h3>
+                    <p class="text-md accent-text">JNTU Kakinada, 2020</p>
+                </div>
+                <div class="glass-card p-8">
+                    <h2 class="text-2xl font-bold text-white border-b-2 accent-border pb-3 mb-6">Certifications</h2>
+                    <ul class="list-none space-y-2">
+                        <li class="flex items-center gap-3"><i class="fas fa-certificate accent-text"></i> LoadRunner Enterprise</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-certificate accent-text"></i> Parasoft SOA Automation</li>
+                    </ul>
+                </div>
+            </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:deepalagani1998@gmail.com">deepalagani1998@gmail.com</a></p>
-            <p>Phone: +91 9848519115</p>
-        </div>
-    </section>
+        </main>
 
+        <footer class="text-center py-10 mt-16 text-gray-500 text-sm">
+            <p>&copy; 2025 Desowja Palagani.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
